@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}{# on herite du layout général de l'application #}
+
+{# on remplace le contenu du block title #}
+{% block title %}Mon site{% endblock %}
+{%  block stylesheet %}
+    {{  parent() }}
+    {% endblock %}
+{# on complete le block body#}
+
+{% block body %}
+
+
+    {# on definit un nouveau block qui acceueillera le contenu des pages de mon bundle #}
+    {% block content_body %}{% endblock %}
+{% endblock %}
